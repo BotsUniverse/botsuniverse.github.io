@@ -7,6 +7,10 @@
 
   box-sizing: border-box;
 }
+button
+{
+  cursor: pointer;
+}
 /* the body */
 body
 {
@@ -19,22 +23,36 @@ body
 
   color: white;
   background-color: #303030;
+
+  font-size: 18px;
+  font-family: monospace;
+  font-weight: thin;
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: stretch;
+
+  min-height: 100vh;
 }
 /* the navbar */
 #navbar
 {
-  position: fixed;
+  position: sticky;
 
-  height: 100%;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
 
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
 
   background-color: #202020;
   
   max-width: 4em;
+
+  z-index: 100;
 }
 /* all the nav bar links */
 #navbar .nav-link
@@ -83,7 +101,6 @@ body
 {
   backdrop-filter: grayscale(0);
 }
-
 /* The currently active link */
 #navbar .nav-link.active
 {
@@ -100,7 +117,7 @@ body
   transform: scale(0);
   
   padding: .1em 1em;
-
+  
   border-radius: 0px 1em 1em 0;
   background-color: #202020;
 
@@ -118,10 +135,10 @@ body
   border-radius: 0px 1em 1em 0;
   background-color: #202020;
 }
-
-
 .popup-container
 {
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -130,9 +147,49 @@ body
 }
 .popup-text
 {
+  font-size: 1.1em;
   padding: 1em;
 }
 .close-btn
 {
-  font-size: 2em;
+  font-size: 1.5em;
+}
+#page
+{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+#main
+{
+  display: flex;
+  flex-direction: column;
+
+  margin: 2em;
+  padding: 2em;
+  background-color: #102020;
+}
+#header
+{
+  display: flex;
+  align-items: center;
+
+  font-size: 3em;
+
+  text-align: center;
+}
+#header .img
+{
+  border-right: 1px solid #fff2;
+}
+#header > *
+{
+  padding: .1em 1em;
+}
+#main main
+{
+  font-size: 1.2em;
+  padding: 2em 0 0 0;
+  text-align: center;
 }

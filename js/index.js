@@ -6,6 +6,7 @@ const createPopup = (text="", color="green") => {
   // create popup close button element
   var closeBtn = document.createElement("button");
   closeBtn.innerHTML = "❌";
+  closeBtn.className = "close-btn";
   closeBtn.onclick = (event) => { 
     event.target.parentNode.remove();
   }
