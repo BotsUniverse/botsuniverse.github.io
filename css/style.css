@@ -118,3 +118,21 @@ body
   border-radius: 0px 1em 1em 0;
   background-color: #202020;
 }
+
+
+.popup-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: .2em;
+}
+.popup-text
+{
+  padding: 1em;
+}
+.close-btn
+{
+  font-size: 2em;
+}
