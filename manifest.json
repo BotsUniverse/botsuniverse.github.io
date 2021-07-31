@@ -18,7 +18,14 @@
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
+        },
+        {
+            "src": "./images/logo-196x196.png",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
         }
+      
     ],
     "start_url": "/",
     "background_color": "#303030",
