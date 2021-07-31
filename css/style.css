@@ -1,0 +1,120 @@
+*
+{
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+/* the body */
+body
+{
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  font-size: 20px;
+
+  color: white;
+  background-color: #303030;
+}
+/* the navbar */
+#navbar
+{
+  position: fixed;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #202020;
+  
+  max-width: 4em;
+}
+/* all the nav bar links */
+#navbar .nav-link
+{
+  position: relative;
+  
+  width: calc( .7em + 1.5em );
+  
+  display: flex;
+  
+  padding: 1em .4em;
+  
+  font-size: 1.5em;
+  text-decoration: none;
+  
+  color: #fff5;
+
+  transition: color 0.2s ease-in-out, backdrop-filter 1s ease;
+}
+#navbar .nav-link:hover {
+  color: #fff;
+}
+/* The black mask on the link */
+#navbar .nav-link.active::after {
+  backdrop-filter: contrast(.8);
+}
+#navbar .nav-link.active:hover::after {
+  backdrop-filter: contrast(.9);
+}
+#navbar .nav-link::after
+{
+  content: "";
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  
+  background-color: #fff0;
+  backdrop-filter: grayscale(.7);
+}
+/* remove the mask on hover */
+#navbar .nav-link:hover::after
+{
+  backdrop-filter: grayscale(0);
+}
+
+/* The currently active link */
+#navbar .nav-link.active
+{
+  color: #0ff;
+}
+#navbar .nav-link.active:hover {
+  color: #0ff;
+}
+/* the description that pops up when the user hovers over the link */
+.nav-link .nav-desc
+{
+  position: absolute;
+  left: -2em;
+  transform: scale(0);
+  
+  padding: .1em 1em;
+
+  border-radius: 0px 1em 1em 0;
+  background-color: #202020;
+
+  transition: .3s;
+}
+/* show the desc */
+.nav-link:hover .nav-desc
+{
+  position: absolute;
+  left: 2.4em;
+  
+  padding: .1em 1em;
+  transform: scale(1);
+
+  border-radius: 0px 1em 1em 0;
+  background-color: #202020;
+}
