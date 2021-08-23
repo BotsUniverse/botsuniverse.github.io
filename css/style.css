@@ -1,195 +1,156 @@
-*
-{
+* {
   position: relative;
-
   padding: 0;
   margin: 0;
+}
 
-  box-sizing: border-box;
-}
-button
-{
-  cursor: pointer;
-}
-/* the body */
+
 body
 {
   position: relative;
-
-  width: 100%;
-  min-height: 100vh;
-
-  font-size: 20px;
-
-  color: white;
-  background-color: #303030;
-
-  font-size: 18px;
-  font-family: monospace;
-  font-weight: thin;
-
-  display: flex;
-  /* align-items: center; */
-  justify-content: stretch;
-
-  min-height: 100vh;
-}
-/* the navbar */
-#navbar
-{
-  position: sticky;
-
-  top: 0;
-  left: 0;
-
-  height: 100vh;
-
+  
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
+}
 
-  background-color: #202020;
-  
-  max-width: 4em;
+#navbar:not(.open)
+{
+  position: fixed;
 
-  z-index: 100;
-}
-/* all the nav bar links */
-#navbar .nav-link
-{
-  position: relative;
-  
-  width: calc( .7em + 1.5em );
-  
-  display: flex;
-  
-  padding: 1em .4em;
-  
-  font-size: 1.5em;
-  text-decoration: none;
-  
-  color: #fff5;
+  top: 2%;
+  left: 70%;
 
-  transition: color 0.2s ease-in-out, backdrop-filter 1s ease;
-}
-#navbar .nav-link:hover {
-  color: #fff;
-}
-/* The black mask on the link */
-#navbar .nav-link.active::after {
-  backdrop-filter: contrast(.8);
-}
-#navbar .nav-link.active:hover::after {
-  backdrop-filter: contrast(.9);
-}
-#navbar .nav-link::after
-{
-  content: "";
-  position: absolute;
-  
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-  
-  background-color: #fff0;
-  backdrop-filter: grayscale(.7);
-}
-/* remove the mask on hover */
-#navbar .nav-link:hover::after
-{
-  backdrop-filter: grayscale(0);
-}
-/* The currently active link */
-#navbar .nav-link.active
-{
-  color: #0ff;
-}
-#navbar .nav-link.active:hover {
-  color: #0ff;
-}
-/* the description that pops up when the user hovers over the link */
-.nav-link .nav-desc
-{
-  position: absolute;
-  left: -2em;
-  transform: scale(0);
-  
-  padding: .1em 1em;
-  
-  border-radius: 0px 1em 1em 0;
-  background-color: #202020;
+  opacity: 0.4;
 
   transition: .3s;
 }
-/* show the desc */
-.nav-link:hover .nav-desc
+#navbar:not(.open) .nav-item { display: none; }
+#navbar:not(.open):hover
 {
-  position: absolute;
-  left: 2.4em;
-  
-  padding: .1em 1em;
-  transform: scale(1);
-
-  border-radius: 0px 1em 1em 0;
-  background-color: #202020;
+  opacity: 1;
 }
-.popup-container
+
+
+/* IF THE NAV IS OPEN */
+#navbar.open *
 {
+  transition: .3s;
+}
+#navbar.open
+{
+  transition: .3s;
+
   position: fixed;
+
   top: 0;
+  left: 0;
+
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(2em, .2fr));
+  gap: .5em;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  justify-items: start;
+
+  width: 6em;
+  height: 100vh;
+  
+  border-radius: 0px;
+  background-color: #303030;
+  padding: .7em;
+}
+#navbar .nav-item
+{
+  position: relative;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 2em;
 
-  padding: .2em;
-}
-.popup-text
-{
-  font-size: 1.1em;
   padding: 1em;
+  text-decoration: none;
+
+  /* FROM  https://neumorphism.io/*/
+  border-radius: 25px;
+  background: #e0e0e0;
+  box-shadow: inset 6px 6px 10px #5a5a5a,
+              inset -6px -6px 10px #ffffff;
+  
+  max-width: 4em;
+  width: 4em;
+  overflow: hidden;
+
+  transition: 1s;
+  color: #303030;
 }
-.close-btn
+#navbar .nav-item:hover
+{
+  max-width: 15em;
+  width: 15em;
+}
+.nav-item i
+{
+  position: relative;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  font-size: 2em;
+  text-align: center;
+
+  min-width: 2em;
+  width: 2em;
+  height: 2em;
+  
+  border-radius: 50%;
+
+  border-radius: 50%;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow:  13px 13px 26px #5a5a5a,
+              -13px -13px 26px #ffffff;
+}
+.nav-item .text
 {
   font-size: 1.5em;
 }
-#page
-{
-  display: flex;
-  flex-direction: column;
 
-  width: 100%;
-}
-#main
-{
-  display: flex;
-  flex-direction: column;
 
-  margin: 2em;
-  padding: 2em;
-  background-color: #102020;
-}
-#header
+#nav-toggler
 {
+  transition: .3s;
+  position: relative;
+  
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   font-size: 3em;
+  text-align: center;
 
-  text-align: center;
+  width: 2em;
+  height: 1.3em;
+
+
+  border-radius: 25px;
+  background: #e0e0e0;
+  box-shadow: inset 6px 6px 10px #5a5a5a,
+              inset -6px -6px 10px #ffffff,
+              0px 0px 0px #fff0,
+              0px 0px 0px #fff0;
+              
+              cursor: pointer;
 }
-#header .img
+#nav-toggler:hover
 {
-  border-right: 1px solid #fff2;
-}
-#header > *
-{
-  padding: .1em 1em;
-}
-#main main
-{
-  font-size: 1.2em;
-  padding: 2em 0 0 0;
-  text-align: center;
+  box-shadow: inset 0px 0px 0px #fff0,
+              inset 0px 0px 0px #fff0,
+              5px 5px 10px #8f8f8f,
+             -5px -5px 10px #ffffff70;
 }
