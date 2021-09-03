@@ -1,73 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="keywords"
-    content="bots, telegrambot, telegram, venilabots, springreen, sprin-g-reen, botiniverse, universe, telebot, pyrogram, nodebot, sprin"
-  />
-  <meta
-    name="description"
-    content="A parallel universe where telegram bots are born! Get fully working telegram bots now!"
-  />
-  <meta name="theme-color" content="#303030">
-  <link rel="apple-touch-icon" href="./images/logo-100x100.svg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="keywords" content="bots universe,bots,telegram,">
+  <meta name="description" content="">
 
-  <title>Bots Universe's Beta site</title>
+  <title>Bots Universe</title>
 
-  <link
-    rel="shortcut icon"
-    href="./images/logo-100x100.svg"
-    type="image/svg"
-  />
-  <link rel="manifest" href="./manifest.json" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <!-- <script src="./js/index.js"></script> -->
+  <!-- The style sheet that needs to be changed to toggle the mode -->
+  <link rel="shortcut icon" href="/image/favicon.svg" type="image/svg">
+  <link rel="stylesheet" href="css/home.css">
+
+  <script src="js/anime.min.js"></script>
+  <script defer src="background.js"></script>
+  <script src="js/home.js" defer></script>
+
 </head>
 <body>
+  
+  <div id="background"></div>
 
-  <nav id="navbar" class="small">
+  <div class="navbar">
+    <img src="/image/favicon.svg" class="image" />
+    <div class="links" dt>
+      <div class="link menuToggler" onclick="toggleNav()">Menu</div>
 
-    <i class="bi bi-three-dots" id="nav-toggler" onclick="toggleNav()"></i>
+      <a href="/" class="link">Home</a>
+      <a href="https://telegram.me/bots_universe" class="link">Telegram</a>
+      <a href="https://github.com/botsuniverse" class="link">Github</a>
 
-    <a href="/" class="nav-item">
-      <i class="bi bi-house-door"></i>
-      <div class="text">Home</div>
-    </a>
-
-    <a href="https://apibu.herokuapp.com/" class="nav-item">
-      <i class="bi bi-tools"></i>
-      <div class="text">APIs</div>
-    </a>
-
-    <a href="https://telegram.me/botsuniverse" class="nav-item">
-      <i class="bi bi-telegram"></i>
-      <div class="text">Telegram</div>
-    </a>
-
-    <a href="https://github.com/botsuniverse" class="nav-item">
-      <i class="bi bi-github"></i>
-      <div class="text">GitHub</div>
-    </a>
-  </nav>
+      <div class="dd-container">
+        <div class="dd-text">More</div>
+        <div class="dd-content">
+          <a href="https://apibu.herokuapp.com/" class="dd-link">APIs</a>
+          <a href="https://telegram.me/bots_universe" class="dd-link">Owner</a>
+          <a href="https://telegram.me/venilabots1" class="dd-link">Join</a>
+          <a href="https://pypal.me/rohit204" class="dd-link">Donate</a>
+        </div>    
+      </div>
+    </div>
+  </div>
 
 
+  <div class="head">
+    <div class="article">
+      <div class="title">Bots Universe</div>
+      <div class="content">
+        A Universe where you will find all the species of telegram bots to use, for free. We create <em>next-generation</em> telegram robots.
+      </div>
+    </div>
+  </div>
 
-  <section id="page">
 
-  </section>
+  <div class="bots-container">
+
+    <div class="bot-cont-title">Feartued Bots</div>
+
+    <div class="bot-cont">
+
+      <div class="bot">
+        <a href="https://telegram.me/ytube_mp3_bot" class="bot-uname">@ytube_mp3_bot</a>
+        <div class="bot-text">This bot can search and download you any video from YouTube in both mp3 and mp4 format.</div>
+      </div>
+
+      <div class="bot">
+        <a href="https://telegram.me/sp_amaz_bot" class="bot-uname">@sp_amaz_bot</a>
+        <div class="bot-text">This bot can help you search for Amazon products in the telegram.</div>
+      </div>
+
+      <div class="bot">
+        <a href="https://telegram.me/bu_flipkart_bot" class="bot-uname">@bu_flipkart_bot</a>
+        <div class="bot-text">This bot can help you search for Flipkart products in the telegram.</div>
+      </div>
+
+      <div class="bot">
+        <a href="https://telegram.me/scrptogbot" class="bot-uname">@scrptogbot</a>
+        <div class="bot-text">A bot that can encode and decode your message with a key given by you.</div>
+      </div>
+
+      <div class="bot">
+        <a href="https://telegram.me/secratorybot" class="bot-uname">@secratorybot</a>
+        <div class="bot-text">A group manager bot that can manage you groups.</div>
+      </div>
+
+      <div class="bot">
+        <a href="https://telegram.me/bots_universe" class="bot-uname">More Bots</a>
+        <div class="bot-text">There are more exciting bots waiting for you!</div>
+      </div>
+
+    </div>
+
+  </div>
+
 
 
 </body>
-<script>
-
-function toggleNav(){
-  document.querySelector('#navbar').classList.toggle('open')
-}
-
-
-</script>
 </html>

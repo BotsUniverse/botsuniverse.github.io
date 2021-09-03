@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: var(--c2);
+}
+.links {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.link {
+  color: var(--c4);
+  font-size: 20px;
+  line-height: 160%;
+  padding: 5px 10px;
+  padding-right: 0;
+}
+.link:hover {
+  color: var(--c5);
+  background-color: var(--c4);
+}
+
+
+@media screen and (max-width:500px ){
+  .navbar img {
+    width: 50px;
+  }
+  .links {
+    flex-direction: column;
+  }
+  .link {
+    width: 100%;
+  }
+  .menuToggler {
+    display: block;
+    font-size: 20px;
+  }
+}

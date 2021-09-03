@@ -1,0 +1,21 @@
+:root {
+  /* The body's property */
+  --body-fg: ;
+  --body-bg: #00050f;
+  --body-font-family: ;
+
+
+  /* The nav bar's properties */
+  --nav-bg: ;
+  --nav-fg: ;
+
+  --nav-link-fg: ;
+  --nav-link-bg: ;
+  --nav-link-font-family: ;
+
+  --h-nav-link-fg: ;
+  --h-nav-link-bg: ;
+
+  --a-nav-link-fg: ;
+  --a-nav-link-bg: ;
+}
