@@ -1,6 +1,7 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @font-face {
   font-family: "Cascadia Code";
-  src: url("ttf/CascadiaCode.ttf");
+  src: url("../ttf/CascadiaCode.ttf");
 }
 :root {
   /* The body's property */
@@ -213,7 +214,7 @@ a {
   flex-direction: row;
 
   width: 70%;
-  height: 70vh;
+  height: 120vh;
 
   z-index: 10;
   transition: .05s;
@@ -227,6 +228,7 @@ a {
   flex-direction: column;
 
   min-width: 45%;
+  min-height: 70vh;
 
   background-image: radial-gradient(#f4beff30 0% 50%, #0000 10%);
   background-size: 10em 10em;
@@ -267,7 +269,7 @@ a {
   flex-direction: column;
 
   width: 100%;
-  /* min-height: 70vh; */
+  min-height: 100vh;
 
   z-index: 10;
 }
@@ -329,6 +331,56 @@ a {
 }
 
 
+
+/* footer */
+.footer {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.footer > *{
+  position: relative;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.one {
+  align-items: flex-start;
+  border-right: 1px solid #fff7;
+  border-radius: 0px;
+  line-height: 200%;
+  padding: .5em 2em;
+}
+.footer a{
+  color: #fff7;
+  padding: .2em 1em;
+  transition: .3s;
+}
+.footer a:hover{
+  color: #fff;
+  box-shadow: 0 0 10px #fff;
+}
+.two .top{
+  position: relative;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+
+
+/* Media properties */
+
 @media only screen and (max-width: 1230px){
   .head, .head .article{ width: 90%; }
   .head .article{ font-size: 1em; }
@@ -368,4 +420,6 @@ a {
   .bot-cont-title{ font-size: 2em; }
   .bot-text{ font-size: 1em;line-height: 120%;letter-spacing: .1em; }
   .bot-uname{ font-size: 1.4em; }
+  .footer { gap: 1rem; }
+  .one { padding: .5em .5em;}
 }
