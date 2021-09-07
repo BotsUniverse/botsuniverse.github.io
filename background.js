@@ -1,4 +1,6 @@
 const background = document.getElementById('background');
+hideAnime = true;
+console.log(hideAnime)
 
 for (var i = 0; i < 100; i ++){
   var star = document.createElement('div');
@@ -8,6 +10,11 @@ for (var i = 0; i < 100; i ++){
 
 
 function animate2(){
+  console.log(hideAnime)
+  if (hideAnime) {
+    document.body.setAttribute("noAnime", "")
+    return false
+  };
   anime({
     targets: '.star',
     translateY: function(){
@@ -27,6 +34,9 @@ function animate2(){
 
 
 function animate(){
+  console.log(hideAnime)
+  hideAnime = confirm("Do you want to stop animations??, that might reduce some lag.");
+  console.log(hideAnime)
   anime({
     targets: '.star',
     translateY: function(){

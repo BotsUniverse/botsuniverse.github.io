@@ -32,6 +32,15 @@
   box-sizing: border-box;
   border-radius: 1rem;
 }
+body * {
+  transition: .3s;
+}
+body[noAnime] b {
+  transition: 0s;
+}
+body[noAnime] * {
+  transition: 0s;
+}
 
 body {
   position: relative;
@@ -106,6 +115,9 @@ a {
   opacity: 0.5;
 
   transition: .3s;
+}
+body[noAnime] .link, body[noAnime] .dd-container  {
+  transition: 0s;
 }
 .link:hover, .dd-container:hover{
   color: var(--h-nav-link-fg);
@@ -219,6 +231,9 @@ a {
   z-index: 10;
   transition: .05s;
 }
+body[noAnime] .head{
+  transition: 0s;
+}
 .head .article {
   position: relative;
   
@@ -237,8 +252,11 @@ a {
 
   background-color: #ffffff05;
   border: 1px solid #fff2;
-  padding: 2em;
+padding: 2em;
   transition: .3s;
+}
+body[noAnime] .head .article  {
+  transition: 0s;
 }
 .head .article:hover{
   background-size: 100em 100em;
@@ -306,8 +324,11 @@ a {
   background-color: #fff1;
   width: 20em;
   height: 15em;
-  border: 1px solid #fff5;
+border: 1px solid #fff5;
   transition: .3s;
+}
+body[noAnime] .bot  {
+  transition: 0s;
 }
 .bot:hover {
   box-shadow: 0 0 32px #fff3;
@@ -316,8 +337,11 @@ a {
 .bot-uname {
   position: relative;
   font-size: 2.5rem;
-  color: hotpink;
+color: hotpink;
   transition: .3s;
+}
+body[noAnime] .bot-uname  {
+  transition: 0s;
 }
 .bot-uname:hover {
   transform: scale(1.2);
@@ -360,8 +384,11 @@ a {
 }
 .footer a{
   color: #fff7;
-  padding: .2em 1em;
+padding: .2em 1em;
   transition: .3s;
+}
+body[noAnime] .footer a {
+  transition: 0s;
 }
 .footer a:hover{
   color: #fff;
@@ -375,6 +402,7 @@ a {
   justify-content: center;
   flex-direction: row;
 }
+
 
 
 
@@ -420,6 +448,6 @@ a {
   .bot-cont-title{ font-size: 2em; }
   .bot-text{ font-size: 1em;line-height: 120%;letter-spacing: .1em; }
   .bot-uname{ font-size: 1.4em; }
-  .footer { gap: 1rem; }
-  .one { padding: .5em .5em;}
+  .footer { gap: 1rem;flex-direction: column; }
+  .one { padding: .5em .5em; border-right: 0px solid #0000; border-bottom: 1px solid #fff7 }
 }
